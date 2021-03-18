@@ -1,0 +1,11 @@
+từ khoá tìm hiểu  : 	- client rendering
+			- render
+			- serverside rendering
+			- recact + react native
+			- jsx & compoment
+
+		
+cài môi trường  :	1  npm i create-react-app -g
+			2  create-react-app folder_name
+			3  cd folder_name
+			4  npm start
