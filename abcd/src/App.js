@@ -21,6 +21,9 @@ function App() {
   }, [])  
   const handleAdd = (value)=>{
     console.log('App.js', value)
+    setAlbums([
+      ...albums,value]
+    )
   }
   return (
     <div className="App">
