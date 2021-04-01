@@ -3,6 +3,8 @@ import{useForm} from "react-hook-form"
 
 const AddProduct = ({onAdd}) => {
     const {register, handleSubmit, errors} = useForm();
+
+    // register thiết lập điều kiện
     const onSubmit = data => onAdd(data);
     return (
         <div>
@@ -13,11 +15,11 @@ const AddProduct = ({onAdd}) => {
         <div className="mb-3">
           <label htmlFor="productName" className="form-label">Product Name</label>
           <input  type="text" name="name" placeholder="Tên sản phẩm" className="form-control" ref={register({required : true})} />
-          {errors.name && <span>This field is required </span>}git 
+          {errors.name && <span>This field is required </span>}
         </div>
         <div className="mb-3">
           <label htmlFor="productPrice" className="form-label">Price</label>
-          <input  type="number" name="name" placeholder="Giá" className="form-control" ref={register({required : true})} />
+          <input  type="number" name="price" placeholder="Giá" className="form-control" ref={register({required : true})} />
           {errors.price && <span>This field is required </span>}
         </div>
         <div className="mb-3">

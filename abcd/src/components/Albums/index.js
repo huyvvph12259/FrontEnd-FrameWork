@@ -1,7 +1,7 @@
 import React from 'react'
 import AlbumItem from '../AlbumItem'
 
-const Albums = ({data}) => {
+const Albums = ({data, onDelete}) => {
   // console.log(data)
     return (
         <div>
@@ -9,7 +9,7 @@ const Albums = ({data}) => {
             <div className="container">
               <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 {data.map((album, index)=>{
-                  return <AlbumItem key={index} item={album} />
+                  return <AlbumItem key={index} item={album} onDelete={onDelete} />
                 })}
               </div>
             </div>

@@ -14,16 +14,29 @@ import AddProduct from './components/AddProduct'
 function App() {
   const[albums, setAlbums] = useState([])
   useEffect(() => {
-      fetch('https://6008fb580a54690017fc2817.mockapi.io/persons')
-      .then(response => response.json())
-      .then(data => setAlbums((data)));
     
+    const getAlbums = async () =>{
+      try{
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/products`);
+      const data = await response.json();
+      setAlbums(data);
+      }catch(err){
+        console.log(err);
+      }
+    }
+    getAlbums();
   }, [])  
   const handleAdd = (value)=>{
     console.log('App.js', value)
     setAlbums([
       ...albums,value]
     )
+  }
+  const onHandleRemove = (id) =>{
+    console.log('App.js', id)
+    const newAlbum = albums.filter((item)=> item.id !=id)
+    // console.log(newAlbum)
+    setAlbums(newAlbum)
   }
   return (
     <div className="App">
@@ -33,7 +46,7 @@ function App() {
           
           <AddProduct onAdd={handleAdd}/>
           <Banner />
-          <Albums data = {albums}/>
+          <Albums data = {albums} onDelete={onHandleRemove}/>
         </main>
         <Footer />
       </div>
