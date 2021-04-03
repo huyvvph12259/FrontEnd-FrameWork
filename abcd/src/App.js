@@ -26,17 +26,33 @@ function App() {
     }
     getAlbums();
   }, [])  
-  const handleAdd = (value)=>{
-    console.log('App.js', value)
-    setAlbums([
-      ...albums,value]
-    )
+  const handleAdd = async (value)=>{
+    try{
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/products`,{
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(value)
+      });
+      const data = await response.json();
+      // Sau khi thêm thành công vào API thì gọi lại state
+      setAlbums([
+        ...albums,data]
+      )
+      }catch(err){
+        console.log(err);
+      }
+
+    
+    
   }
   const onHandleRemove = (id) =>{
-    console.log('App.js', id)
-    const newAlbum = albums.filter((item)=> item.id !=id)
-    // console.log(newAlbum)
-    setAlbums(newAlbum)
+    // console.log('App.js', id)
+    // const newAlbum = albums.filter((item)=> item.id !=id)
+    // // console.log(newAlbum)
+    // setAlbums(newAlbum)
+    
   }
   return (
     <div className="App">
@@ -54,78 +70,6 @@ function App() {
   );
 }
 
-
-
-// function App(){
-//   const Hs = [
-//     {id: '12412', name: 'Duy Thìn'},
-//     {id: '123411', name: 'Văn Long'},
-//     {id: '12411', name: 'Thuận'}
-    
-
-//   ]
-//   return(
-//     <div>
-//       <table>
-//         <tbody>
-//           {Hs.map((sv, index) =>(
-//             <tr key={index}>
-//               <td>
-//                 {sv.name}
-//               </td>
-//             </tr>
-            
-//           ))}
-//         </tbody>
-//       </table>
-//     </div>
-//   );
-// }
-
-
-// DEMO PROPS
-// function App(){
-//   const students = [
-//     {id: '12412', name: 'Duy Thìn'},
-//     {id: '123411', name: 'Văn Long'},
-//     {id: '12411', name: 'Thuận'}
-//   ]
-//   return(
-//     <div>
-//       <NbList students={students}/>,
-//     </div>
-//   );
-// }
-
-
-
-// Demo State
-// function App(){
-// const [Albums, setAlbums] = useState([
-//       {id: '12412', name: 'Duy Thìn'},
-//       {id: '123411', name: 'Văn Long'},
-//       {id: '12411', name: 'Thuận'}
-//     ])
-// const setNewAlbums
-//     return(
-          
-//             <button onClick={() => setAlbums(Albums + 1)}> </button>
-          
-//         );
-  
-// }
-// function App(){
-// const [color, setColor] = useState("green")
-// const changeName = () =>{
-//   setColor  ("red")
-// }
-// return (
-//   <div>
-//     <button onClick={()=> changeName()}>click</button>
-//     <div style={{width: 300,height: 300,backgroundColor: color}} > </div>
-//   </div>
-// );
-// }
 
 
 export default App;
