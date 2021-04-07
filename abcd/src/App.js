@@ -2,17 +2,18 @@ import logo from './logo.svg';
 import React , {useState , useEffect} from 'react'
 import './App.css';
 import Header from './components/Header';
-import Banner from './components/Banner';
-import Albums from './components/Albums';
-import Footer from './components/Footer';
-import Hello from './components/Hello';
-import NbList from './components/Hello';
-import AddProduct from './components/AddProduct'
 
+import Footer from './components/Footer';
+import AddProduct from './components/AddProduct'
+import DetailAlbum from './components/DetailAlbum';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import HomePage from './components/pages/HomePage';
+import ProductsPage from './components/pages/Products';
 
 
 function App() {
-  const[albums, setAlbums] = useState([])
+  const[albums, setAlbums] = useState([]);
+  const[albumItem, setAlbumItem] = useState({})
   useEffect(() => {
     
     const getAlbums = async () =>{
@@ -47,26 +48,46 @@ function App() {
     
     
   }
-  const onHandleRemove = (id) =>{
-    // console.log('App.js', id)
-    // const newAlbum = albums.filter((item)=> item.id !=id)
-    // // console.log(newAlbum)
-    // setAlbums(newAlbum)
+  const onHandleRemove = async (id) =>{
+    try{
+      await fetch(`${process.env.REACT_APP_API_URL}/products/${id}`,{
+        method : 'DELETE',
+      })
+    const newAlbum = albums.filter((item)=> item.id !=id)
+    // console.log(newAlbum)
+    setAlbums(newAlbum)
+  }catch(err){
+    console.log(err)
+  }
+  }
+  const onHandleDetail = async (id) =>{
+    try{
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/products/${id}`)
+    const data = await response.json();
+    setAlbumItem(data);
     
+  }catch(err){
+    console.log(err)
+  }
   }
   return (
+          <Router>
     <div className="App">
       <div>
         <Header />
         <main>
+            <Switch>
+              <Route path="/" exact component={()=> <HomePage albums={albums}/>}/>
+              <Route path="/products" exact component={()=><ProductsPage albums={albums}/>}/>
+              <Route path="/products/:id" exact component={ProductsPage}> Chi tiết sản phẩm </Route>
+
+            </Switch>
           
-          <AddProduct onAdd={handleAdd}/>
-          <Banner />
-          <Albums data = {albums} onDelete={onHandleRemove}/>
         </main>
         <Footer />
       </div>
     </div>
+          </Router>
   );
 }
 

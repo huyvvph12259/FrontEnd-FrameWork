@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AlbumItem = ({item, onDelete}) => {
+const AlbumItem = ({item, onDelete ,onDetail}) => {
   
     return (
         <div className="col">
@@ -12,6 +12,8 @@ const AlbumItem = ({item, onDelete}) => {
                         <div className="btn-group">
                           
                           <button type="button" className="btn btn-sm btn-outline-secondary" onClick={() => onDelete(item.id)}>Delete</button>
+                          <button type="button" className="btn btn-sm btn-outline-secondary" onClick={() => onDetail(item.id)}>Detail</button>
+
 
                         </div>
                         <small className="text-muted">9 mins</small>
