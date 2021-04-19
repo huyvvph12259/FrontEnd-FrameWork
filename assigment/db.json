@@ -1,0 +1,78 @@
+{
+  "products": [
+    {
+      "id": "2",
+      "name": "Tag Heuer",
+      "image": "https://firebasestorage.googleapis.com/v0/b/update-53ca5.appspot.com/o/image%2Fpopular1.png?alt=media&token=8eef38dc-4f5c-4071-bfc0-fd7ec7e6327c",
+      "price": "1113232131",
+      "categoryId": "1",
+      "desc": "Một trong những thương hiệu đồng hồ Thụy Sỹ danh giá, Tag Heuer nổi tiếng với công nghệ chế tác đồng hồ thể thao cực đỉnh. Thương hiệu nhanh chóng đẩy tên tuổi của mình khi kết hợp với các giải thể thao uy tín, đua xe và nhà sản xuất đua xe. Không chỉ dừng lại với đồng hồ đeo tay cổ điển, đồng hồ thông minh (smartwatch) Tag Heuer cũng dần chiếm được thị phần của riêng mình. Nam giới yêu thích đồng hồ nam với thiết kế khỏe khoắn không thể bỏ qua dòng Formula One, Aquaracer hay Grand Carrera từ Tag Heuer."
+    },
+    {
+      "id": "3",
+      "name": "Rolex Swiss Made",
+      "image": "https://firebasestorage.googleapis.com/v0/b/update-53ca5.appspot.com/o/image%2Fpopular2.png?alt=media&token=d33d5057-b062-4a63-833e-2169c9e4cb7c",
+      "price": "1421342",
+      "categoryId": "2",
+      "desc": "Một trong những thương hiệu đồng hồ cao cấp hay có thể nói là duy nhất trên thế giới được biến đến rộng rãi về mặt hình ảnh cũng như được yêu chuộng đó chính là Rolex. Đồng hồ Rolex được đánh giá cao về thiết kế cũng như chất lượng vượt thời gian. Đầu tư mua đồng hồ Rolex chính hãng được xem như một phi vụ đầu tư không sợ lỗ nếu bạn muốn bán và thay đổi mẫu mới. Sức sản xuất siêu mạnh với hơn 2000 chiếc đồng hồ mỗi ngày đã giúp Rolex trở thành thương hiệu đồng hồ cao cấp lớn nhất thế giới"
+    },
+    {
+      "id": "4",
+      "name": "Omega",
+      "image": "https://firebasestorage.googleapis.com/v0/b/update-53ca5.appspot.com/o/image%2Fpopular3.png?alt=media&token=cbf457ad-8074-443c-82cc-cef4c6e5824b",
+      "price": "453634352",
+      "categoryId": "3",
+      "desc": "Luôn nằm trong bảng xếp hạng đồng hồ Thụy Sỹ nổi tiếng, Omega là cái tên không thể bỏ quên. Trải qua nhiều thăng trầm trong ngành công nghiệp chế tác đồng hồ, Omega ghi dấu danh tiếng của mình với chiếc đồng hồ du hành vũ trụ siêu cool. Những cỗ máy thời gian Omega cổ điển mạ vàng được giới sành điệu Việt Nam yêu chuộng hơn cả."
+    },
+    {
+      "id": "5",
+      "name": "Longines",
+      "image": "https://firebasestorage.googleapis.com/v0/b/update-53ca5.appspot.com/o/image%2Fpopular4.png?alt=media&token=22d0fea6-1b52-408b-ac59-93776f80a13c",
+      "price": "123213123",
+      "categoryId": "4",
+      "desc": "Tự hào với khả năng cho ra đời những sáng chế mang tính ứng dụng cao, bộ máy đo thời gian chính xác đếLongines là gương mặt thân quen trong những chương trình thể thao và mạo hiểm. Luôn nằm trong top đồng hồ Thụy Sỹ danh tiếng và lâu đời, thiết kế Longines mang đến sự sang trọng đẳng cấp đồng thời đậm nét tinh hoa Thụy Sỹ lâu năm. Sở hữu đồng hồ Longines Thụy Sỹ là sự đầu tư hợp lý với mức giá không hề đắt đỏ."
+    },
+    {
+      "id": "6",
+      "name": "Longines",
+      "image": "https://firebasestorage.googleapis.com/v0/b/update-53ca5.appspot.com/o/image%2Fpopular5.png?alt=media&token=a518f057-9adb-4d14-9759-d4a0a245acd6",
+      "price": "43656464",
+      "categoryId": "2",
+      "desc": "Tự hào với khả năng cho ra đời những sáng chế mang tính ứng dụng cao, bộ máy đo thời gian chính xác đếLongines là gương mặt thân quen trong những chương trình thể thao và mạo hiểm. Luôn nằm trong top đồng hồ Thụy Sỹ danh tiếng và lâu đời, thiết kế Longines mang đến sự sang trọng đẳng cấp đồng thời đậm nét tinh hoa Thụy Sỹ lâu năm. Sở hữu đồng hồ Longines Thụy Sỹ là sự đầu tư hợp lý với mức giá không hề đắt đỏ."
+    },
+    {
+      "id": "7",
+      "name": "Longines",
+      "image": "https://firebasestorage.googleapis.com/v0/b/update-53ca5.appspot.com/o/image%2Fpopular6.png?alt=media&token=a8dac905-b928-4643-b79a-ce1a8f268708",
+      "price": "32414141",
+      "categoryId": "3",
+      "desc": "Tự hào với khả năng cho ra đời những sáng chế mang tính ứng dụng cao, bộ máy đo thời gian chính xác đếLongines là gương mặt thân quen trong những chương trình thể thao và mạo hiểm. Luôn nằm trong top đồng hồ Thụy Sỹ danh tiếng và lâu đời, thiết kế Longines mang đến sự sang trọng đẳng cấp đồng thời đậm nét tinh hoa Thụy Sỹ lâu năm. Sở hữu đồng hồ Longines Thụy Sỹ là sự đầu tư hợp lý với mức giá không hề đắt đỏ."
+    }
+  ],
+  "category": [
+    {
+      "id": "1",
+      "name": "Đồng hồ cơ"
+    },
+    {
+      "id": "2",
+      "name": "Đồng hồ mạ vàng"
+    },
+    {
+      "id": "3",
+      "name": "Đồng hồ điện tử"
+    },
+    {
+      "id": "4",
+      "name": "Đồng hồ kim cương"
+    },
+    {
+      "name": "Đồng hồ đẹp",
+      "id": "A9LhKV0"
+    },
+    {
+      "name": "Đồng hồ nam tính",
+      "id": "gbfGft9"
+    }
+  ]
+}
