@@ -1,13 +1,13 @@
 import React from 'react'
 import AlbumItem from '../AlbumItem'
-import{
+import {
   BrowserRouter,
   Link
 } from 'react-router-dom'
-const Albums = ({data, dataX}) => {
-    return (
-        
-            <div className="popular-items ">
+const Albums = ({ data, addCartPr }) => {
+  return (
+
+    <div className="popular-items ">
       <div className="container">
         {/* Section tittle */}
         <div className="row justify-content-center">
@@ -20,15 +20,10 @@ const Albums = ({data, dataX}) => {
         </div>
         <div className="row">
           {
-            data.map((album, index)=>{
-              return <AlbumItem key={index} item={album} />
+            data.map((album, index) => {
+              return <AlbumItem key={index} item={album} addCartPr={addCartPr} />
             })
           }
-         
-          
-          
-          
-          
         </div>
         {/* Button */}
         <div className="row justify-content-center">
@@ -38,8 +33,8 @@ const Albums = ({data, dataX}) => {
         </div>
       </div>
     </div>
-        
-    )
+
+  )
 }
 
 export default Albums

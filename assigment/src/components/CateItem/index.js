@@ -1,7 +1,7 @@
 import React from 'react'
 const CateItem = ({item,handleCate, itemX}) => {
 
-   console.log("aaaaa",itemX);
+   
     return (
         <div>
             <ul className="list-unstyled mb-0" >

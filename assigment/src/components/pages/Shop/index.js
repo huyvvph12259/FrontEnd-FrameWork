@@ -1,16 +1,17 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import Albums from '../../Albums'
 import Cates from '../../Cates'
 import ShopBanner from '../../ShopBanner'
 
-const Shop = ({ albums, cates }) => {
-    const [cateProduct , setCateProduct] = useState(albums)
+const Shop = ({ albums, cates, addCartPr }) => {
+    const [cateProduct, setCateProduct] = useState(albums)
     const handleCate = (id) => {
         const filterDetail = albums.filter((it) => it.categoryId == id);
+        // trả ra 1 mảng tương ứng điều kiện
         // console.log("cate------",filterDetail)
         setCateProduct(filterDetail);
     }
-    // console.log(albums)
+
     return (
         <div>
             <ShopBanner />
@@ -25,15 +26,13 @@ const Shop = ({ albums, cates }) => {
                             </div>
                         </div>
                         <div className="row mb-5">
-                            <Albums data={cateProduct} />
+                            <Albums data={cateProduct} addCartPr={addCartPr} />
                         </div>
                     </div>
                     <div className="col-md-3 order-1 mb-5 mb-md-0">
                         <div className="border p-4 rounded mb-4">
                             <h3 className="mb-3 h6 text-uppercase text-black d-block">Danh mục</h3>
-                            
                             <Cates data={cates} dataX={albums} handleCate={handleCate} />
-                        
                         </div>
                     </div>
                 </div>

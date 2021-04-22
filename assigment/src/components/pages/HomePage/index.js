@@ -3,14 +3,14 @@ import Albums from '../../Albums'
 import Banner from '../../Banner'
 import VideoIntro from '../../VideoIntro'
 
-const HomePage = ({albums}) => {
+const HomePage = ({albums, addCartPr}) => {
     return (
         <div>
             
             
            
           <Banner />
-          <Albums data = {albums} />
+          <Albums data = {albums} addCartPr={addCartPr} />
           <VideoIntro />
             
         </div>

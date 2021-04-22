@@ -43,10 +43,34 @@
     {
       "id": "7",
       "name": "Longines",
-      "image": "https://firebasestorage.googleapis.com/v0/b/update-53ca5.appspot.com/o/image%2Fpopular6.png?alt=media&token=a8dac905-b928-4643-b79a-ce1a8f268708",
+      "image": "https://firebasestorage.googleapis.com/v0/b/update-53ca5.appspot.com/o/image%2Fpopular6.png?alt=media&token=822fead9-eb0a-402d-bdc4-1772bbd831eb",
       "price": "32414141",
-      "categoryId": "3",
+      "categoryId": "A9LhKV0",
       "desc": "Tự hào với khả năng cho ra đời những sáng chế mang tính ứng dụng cao, bộ máy đo thời gian chính xác đếLongines là gương mặt thân quen trong những chương trình thể thao và mạo hiểm. Luôn nằm trong top đồng hồ Thụy Sỹ danh tiếng và lâu đời, thiết kế Longines mang đến sự sang trọng đẳng cấp đồng thời đậm nét tinh hoa Thụy Sỹ lâu năm. Sở hữu đồng hồ Longines Thụy Sỹ là sự đầu tư hợp lý với mức giá không hề đắt đỏ."
+    },
+    {
+      "id": "091ad5fc-4ebc-4839-ab4a-8c4c92669964",
+      "name": "New1",
+      "price": "123",
+      "desc": "acacac",
+      "image": "https://firebasestorage.googleapis.com/v0/b/update-53ca5.appspot.com/o/image%2Fpatagonia-2560x1440-5k-4k-wallpaper-argentina-mountains-lake-5308-2048x1152.jpg?alt=media&token=dfa4aa40-afd5-4400-8527-895e07be8d48",
+      "categoryId": "A9LhKV0"
+    },
+    {
+      "id": "59f76d78-4df1-481e-bafb-820456614f25",
+      "name": "New1",
+      "price": "123",
+      "desc": "acacac",
+      "image": "https://firebasestorage.googleapis.com/v0/b/update-53ca5.appspot.com/o/image%2Fpatagonia-2560x1440-5k-4k-wallpaper-argentina-mountains-lake-5308-2048x1152.jpg?alt=media&token=dfa4aa40-afd5-4400-8527-895e07be8d48",
+      "categoryId": "A9LhKV0"
+    },
+    {
+      "id": "42e25dec-fa05-4fcd-aaf9-c615ac62d5f5",
+      "name": "New1232",
+      "price": "123111",
+      "desc": "acacac222",
+      "image": "https://firebasestorage.googleapis.com/v0/b/update-53ca5.appspot.com/o/image%2Fa.jpg?alt=media&token=df0726eb-b0ec-4889-a358-31d491284dd9",
+      "categoryId": "3"
     }
   ],
   "category": [

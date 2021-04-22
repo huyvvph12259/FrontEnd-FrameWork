@@ -37,7 +37,7 @@ const Header = () => {
                     </div>
                   </li>
                   <li> <Link href="" to="/manager"><span className="flaticon-user " /><span>Manager</span></Link></li>
-                  <li><a href="cart.html"><span className="flaticon-shopping-cart" /></a> </li>
+                  <li><Link to="/cart"><span className="flaticon-shopping-cart" /></Link> </li>
                 </ul>
               </div>
             </div>

@@ -27,12 +27,6 @@ const AddProducts = ({ onAdd, cates }) => {
 
         });
     }
-    // const onSubmit = (data) => {
-    //     // console.log(data)
-    //     onAdd(data);
-    //     history.push("/manager");
-
-    // };
     return (
         <div>
             <div id="layoutSidenav">
