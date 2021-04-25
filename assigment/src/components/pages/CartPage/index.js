@@ -1,7 +1,7 @@
 import React from 'react'
 
 const CartP = ({ cartPr, addCartPr, removePr }) => {
-
+    const itemsPrice = cartPr.reduce((a, c) => a + c.tr * c.price, 0);
     return (
         <div>
             <div className="slider-area ">
@@ -23,7 +23,7 @@ const CartP = ({ cartPr, addCartPr, removePr }) => {
                     <div className="cart_inner">
                         <div className="table-responsive">
                             <table className="table">
-                                <div>{cartPr.length === 0 && <div>Chưa có sản phẩm</div>}</div>
+                                <div>{cartPr.length === 0 && <div style={{color: "red", fontWeight: "Bold", fontSize: "50px"}}>Nothing in this cart</div>}</div>
 
                                 <thead>
                                     <tr>
@@ -50,7 +50,7 @@ const CartP = ({ cartPr, addCartPr, removePr }) => {
                                                 </div>
                                             </td>
                                             <td>
-                                                <h5>${item.price}</h5>
+                                                <h5>{new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(item.price)}</h5>
                                             </td>
                                             <td>
                                                 <div className="product_count">
@@ -60,7 +60,8 @@ const CartP = ({ cartPr, addCartPr, removePr }) => {
                                                 </div>
                                             </td>
                                             <td>
-                                                <h5>{item.tr}*{item.price}</h5> 
+                                                <h5>{item.tr}*{new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(item.price)}
+                                                </h5>
                                             </td>
                                         </tr>
                                     ))}
@@ -72,7 +73,12 @@ const CartP = ({ cartPr, addCartPr, removePr }) => {
                                             <h5>Tổng</h5>
                                         </td>
                                         <td>
-                                            <h5>$2160.00</h5>
+                                            {
+                                                cartPr.length !==0 &&(
+                                                    new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(itemsPrice)
+                                                )
+                                            }
+                                            {/* <h5>{new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(itemsPrice)}</h5> */}
                                         </td>
                                     </tr>
 

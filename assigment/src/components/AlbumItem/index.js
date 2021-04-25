@@ -14,7 +14,7 @@ const AlbumItem = ({ item, addCartPr }) => {
         </div>
         <div className="popular-caption">
           <h3><Link href="" to={`shop/details/${item.id}`}>{item.name}</Link></h3>
-          <span>{item.price} VNĐ</span>
+          <span>{new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(item.price)}</span>
         </div>
       </div>
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import NavAdmin from '../../NavAdmin'
 const ManagerProduct = ({ albums, onDelete }) => {
-    console.log(albums)
+    // console.log(albums)
     return (
         <div>
             <div id="layoutSidenav">
@@ -36,7 +36,7 @@ const ManagerProduct = ({ albums, onDelete }) => {
                                                         <td><img src={album.image} alt="" width="361px" height="360px" /></td>
                                                         <td>{album.desc}</td>
                                                         <td>{album.categoryId}</td>
-                                                        <td>{album.price} VNĐ</td>
+                                                        <td>{new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(album.price)}</td>
                                                         <div style={{ display: 'inherit' }}>
                                                             <i className="fa fa-trash" style={{ fontSize: '20px', color: 'red' }} onClick={() => { onDelete(album.id) }} />
                                                             <Link to={`manager/edit/${album.id}`}>Edit<i className="far fa-edit" style={{ fontSize: '20px', color: 'green' }} /></Link>

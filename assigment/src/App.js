@@ -56,6 +56,18 @@ function App() {
     }
 
 };
+const onRemove = (pr) => {
+  const response = cartPr.find((x) => x.id === pr.id);
+  if (response.tr === 1) {
+    setCartPr(cartPr.filter((x) => x.id !== pr.id));
+  } else {
+    setCartPr(
+      cartPr.map((x) =>
+        x.id === pr.id ? { ...response, tr: response.tr - 1 } : x
+      )
+    );
+  }
+};
 const onHandleAdd = async (value) => {
   try {
     const response = await fetch(`${process.env.REACT_APP_API_URL}/products`, {
@@ -159,12 +171,12 @@ return (
   <Router>
     <div className="App">
       <div>
-        <Header />
+        <Header countCart={cartPr.length}/>
         <main>
           <Switch>
             <Route path="/" exact component={() => <HomePage albums={albums} addCartPr={addCartPr}/>} />
             <Route path="/shop" exact component={() => <Shop addCartPr={addCartPr} albums={albums} cates={cates} />} />
-            <Route path="/cart" exact component={() => <CartP cartPr={cartPr} addCartPr={addCartPr} />} />
+            <Route path="/cart" exact component={() => <CartP cartPr={cartPr} addCartPr={addCartPr} removePr={onRemove}/>} />
             <Route path="/about" exact component={() => <About />} />
             <Route path="/contact" exact component={() => <Contact />} />
             <Route path="/manager" exact component={() => <ManagerProduct albums={albums} onDelete={onHandleRemove} />} />
@@ -173,11 +185,8 @@ return (
             <Route path="/manager/category/add" exact component={() => <AddCates onAddC={onHandleAddCate} />} />
             <Route path="/manager/category/edit/:id" exact component={() => <UpdateCate cates={cates} onUpdateC={onHandleUpdateCate} />} />
             <Route path="/manager/edit/:id" exact component={() => <UpdateProduct albums={albums} cates={cates} onUpdate={onHandleUpdate} />} />
-            <Route path="/shop/details/:id" exact component={() => <DetailProduct albums={albums} detail={onHandleDetail} />} />
+            <Route path="/shop/details/:id" exact component={() => <DetailProduct albums={albums} detail={onHandleDetail} addCartPr={addCartPr} />} />
           </Switch>
-          {/* <Banner />
-          <Albums />
-          <VideoIntro /> */}
         </main>
         <Footer />
       </div>

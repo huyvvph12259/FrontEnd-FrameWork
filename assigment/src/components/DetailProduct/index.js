@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-const DetailProduct = ({ albums }) => {
+const DetailProduct = ({ albums, addCartPr }) => {
   const { id } = useParams();
   const album = albums.find(pr => pr.id === id)
   return (
@@ -26,10 +26,10 @@ const DetailProduct = ({ albums }) => {
                 <div className="card_area">
                   <div className="product_count_area">
 
-                    <p>Giá: {album.price} VNĐ</p>
+                    <p>Giá: {new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(album.price)}</p>
                   </div>
                   <div className="add_to_cart">
-                    <a href="#" className="btn_3">add to cart</a>
+                    <span href="#" className="btn_3" onClick={() => addCartPr(album)}>add to cart</span>
                   </div>
                 </div>
               </div>

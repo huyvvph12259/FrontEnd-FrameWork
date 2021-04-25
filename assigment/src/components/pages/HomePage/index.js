@@ -6,9 +6,6 @@ import VideoIntro from '../../VideoIntro'
 const HomePage = ({albums, addCartPr}) => {
     return (
         <div>
-            
-            
-           
           <Banner />
           <Albums data = {albums} addCartPr={addCartPr} />
           <VideoIntro />

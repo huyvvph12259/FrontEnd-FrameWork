@@ -3,7 +3,7 @@ import {
   BrowserRouter,
   Link
 } from 'react-router-dom'
-const Header = () => {
+const Header = ({ countCart }) => {
   return (
 
     <header>
@@ -14,7 +14,7 @@ const Header = () => {
             <div className="menu-wrapper">
               {/* Logo */}
               <div className="logo">
-              <Link href="" to="/"><img src="assets/img/logo/logo.png" alt="" /></Link>
+                <Link href="" to="/"><img src="assets/img/logo/logo.png" alt="" /></Link>
               </div>
               {/* Main-menu */}
               <div className="main-menu d-none d-lg-block">
@@ -37,7 +37,9 @@ const Header = () => {
                     </div>
                   </li>
                   <li> <Link href="" to="/manager"><span className="flaticon-user " /><span>Manager</span></Link></li>
-                  <li><Link to="/cart"><span className="flaticon-shopping-cart" /></Link> </li>
+                  <li><Link to="/cart"><span className="flaticon-shopping-cart" style={{paddingRight: 'unset'}}/><span style={{paddingLeft: 'unset'}}>
+                    ({countCart})
+                  </span></Link> </li>
                 </ul>
               </div>
             </div>
